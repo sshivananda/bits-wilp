@@ -104,14 +104,13 @@ public class LectureSchedule {
 	public static void main(String[] args) {
 		// initialize Preference factory to load xml preferences 
 		System.setProperty("java.util.prefs.PreferencesFactory", "nz.net.ultraq.preferences.xml.XMLPreferencesFactory");
-		// preferences are loaded from current_workding_directory/.preferences/user_system_preferences.xml
-		/*try {
+		try {
 			Preferences.importPreferences(ClassLoader.getSystemResourceAsStream(SYSTEM_PREFERENCES_FILE));
 			Preferences.importPreferences(ClassLoader.getSystemResourceAsStream(USER_PREFERENCES_FILE));
 		} catch (IOException | InvalidPreferencesFormatException e) {
 			System.err.println("Could not load " + SYSTEM_PREFERENCES_FILE);
 			e.printStackTrace();
-		}*/
+		}
 		
 		LectureSchedule schedule = new LectureSchedule();
 		schedule.init();

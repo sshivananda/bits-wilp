@@ -1,7 +1,7 @@
 Introduction
 ------------
 This scripts help remove the clutter and view the BITS WILP Lecture Schedule 
-for only the subjects you are interested in.
+for only the subjects that you are interested in.
 
 Requirements
 ------------
@@ -20,3 +20,4 @@ Known Issues
 Support
 ------- 
 https://github.com/KiranMohan/maven-assembly-samples/issues
+
