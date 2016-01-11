@@ -1,0 +1,1 @@
+bits-wilp-lecture-schedule-package/src/main/resources/ReadMe.txt
