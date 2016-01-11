@@ -30,4 +30,14 @@
 			</plugin>
 		</plugins>
 	</build>
+	<dependencies>
+		<dependency>
+			<groupId>org.kiranmohan.bits.wilp</groupId>
+			<artifactId>bits-wilp-lecture-schedule</artifactId>
+			<version>${project.version}</version>
+			<classifier>jar-with-dependencies</classifier>
+			<type>jar</type>
+			<scope>runtime</scope>
+		</dependency>
+	</dependencies>
 </project>
