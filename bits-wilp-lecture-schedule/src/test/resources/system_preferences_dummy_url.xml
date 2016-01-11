@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE preferences SYSTEM "http://java.sun.com/dtd/preferences.dtd">
+<preferences>
+	<root type="system">
+		<map />
+		<node name="bits/wilp/lecture/schedule">
+			<map>
+				<entry key="url" value="http://myurl/onlineLecture/LectSchedule.htm" />
+			</map>
+			<node name="skipPatterns">
+				<map>
+					<entry key="1" value="monday.*" />
+					<entry key="2" value="tuesday.*" />
+					<entry key="3" value="wednesday.*" />
+					<entry key="4" value="thursday.*" />
+					<entry key="5" value="friday.*" />
+					<entry key="6" value="saturday.*" />
+					<entry key="6" value="sunday.*" />
+					<entry key="8" value="\d{0,2}[:\.]\d{0,2}.*-.*\d{0,2}[:\.]\d{0,2}.*" /> <!-- time pattern -->
+					<entry key="9" value="Time/Day"/>
+				</map>
+			</node>
+		</node>
+	</root>
+</preferences>
