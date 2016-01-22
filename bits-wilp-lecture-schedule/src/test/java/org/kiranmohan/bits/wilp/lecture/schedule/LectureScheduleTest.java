@@ -8,6 +8,7 @@ import java.util.prefs.InvalidPreferencesFormatException;
 import java.util.prefs.Preferences;
 
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class LectureScheduleTest {
@@ -41,6 +42,7 @@ public class LectureScheduleTest {
 	}
 
 	@Test
+	@Ignore
 	public void testShowCleanedUpHtmlInBrowser() throws IOException, InvalidPreferencesFormatException {
 		// import the preference file.
 		Preferences.importPreferences(ClassLoader.getSystemResourceAsStream("system_preferences.xml"));

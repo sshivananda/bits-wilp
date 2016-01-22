@@ -28,6 +28,10 @@ public class LectureSchedule {
 	private static final String PREFS_SKIP_PATTERN_NODE = "skipPatterns";
 	private static final String PREFS_SEARCH_REPLACE_NODE = "searchAndReplace";
 	private static final String PREFS_URL_KEY = "url"; 
+	private static final String HTTP_PROXY_HOST_KEY = "http_proxyHost";
+	private static final String HTTP_PROXY_PORT_KEY = "http_proxyPort";
+	private static final String HTTPS_PROXY_HOST_KEY = "https_proxyHost";
+	private static final String HTTPS_PROXY_PORT_KEY = "https_proxyPort";
 	
 	private static final String DEFAUL_URL = "http://vu.bits-pilani.ac.in/onlineLecture/LectSchedule.htm";
 	
@@ -90,6 +94,11 @@ public class LectureSchedule {
 	}
 	
 	private void readUserPreferences() {
+		System.setProperty("http.proxyHost", Preferences.userRoot().get(HTTP_PROXY_HOST_KEY, ""));
+		System.setProperty("http.proxyPort", Preferences.userRoot().get(HTTP_PROXY_PORT_KEY, ""));
+		System.setProperty("https.proxyHost", Preferences.userRoot().get(HTTPS_PROXY_HOST_KEY, ""));
+		System.setProperty("https.proxyPort", Preferences.userRoot().get(HTTPS_PROXY_PORT_KEY, ""));
+		
 		Preferences searchReplaceNode = Preferences.userRoot().node(PREFS_BASE_NODE + "/" + PREFS_SEARCH_REPLACE_NODE);
 		try {
 			for(String key: searchReplaceNode.keys()) {

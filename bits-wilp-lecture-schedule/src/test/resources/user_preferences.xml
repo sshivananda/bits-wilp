@@ -3,7 +3,12 @@
 <!DOCTYPE preferences SYSTEM "http://java.sun.com/dtd/preferences.dtd">
 <preferences>
 	<root type="user">
-		<map />
+		<map>
+			<entry key="http_proxyHost" value="global.proxy.alcatel-lucent.com" />
+			<entry key="http_proxyPort" value="8000" />
+			<!-- <entry key="https_proxyHost" value="" />
+			<entry key="https_proxyPort" value="" />	 -->		
+		</map>
 		<node name="bits/wilp/lecture/schedule">
 			<map/>
 			<node name="searchAndReplace">

@@ -3,14 +3,18 @@
 <!DOCTYPE preferences SYSTEM "http://java.sun.com/dtd/preferences.dtd">
 <preferences>
 	<root type="user">
-		<map />
+		<map>
+			<entry key="http_proxyHost" value="" />
+			<entry key="http_proxyPort" value="" />
+			<!-- <entry key="https_proxyHost" value="" />
+			<entry key="https_proxyPort" value="" />	 -->		
+		</map>
 		<node name="bits/wilp/lecture/schedule">
-			<map/>
+			<map />
 			<node name="searchAndReplace">
 				<map>
-					<!-- This search uses regular expressions. Use "\s*" 
-					     for a space character if it may or may not occur.
-					-->
+					<!-- This search uses regular expressions. Use "\s*"  
+						for a space character that may or may not occur. -->
 					<entry key="SS\s*ZG513" value="Network Security" />
 					<entry key="SS\s*ZG526" value="Distributed Computing" />
 					<entry key="SS\s*ZG527" value="Cloud Computing" />
