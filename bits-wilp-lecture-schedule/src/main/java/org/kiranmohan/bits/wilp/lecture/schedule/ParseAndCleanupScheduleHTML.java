@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.AbstractMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -27,6 +28,7 @@ public class ParseAndCleanupScheduleHTML {
 	private Map<String,String> searchReplaceMap = null;
 	private Path cleanedUpHtml = null;
 	
+	private Map.Entry<String, String> cleanUpEntry = new AbstractMap.SimpleImmutableEntry(".*", "");
 
 	/**
 	 * @param skipPatterns
@@ -115,18 +117,16 @@ public class ParseAndCleanupScheduleHTML {
 		Matcher m = skipPatterns.matcher(text);
 		if (m.matches()) return;
 		
-		// now we can set the text to empty string
-		// the problem subject name if found will be 
-		// set in the subsequent steps
-		cell.text("");
-		
 		// find matching subject/key
-		Optional<Entry<String, String>> key = searchReplaceMap.entrySet()
+		Entry<String, String> key = searchReplaceMap.entrySet()
 								                .stream()
 								                .filter(e -> text.matches(e.getKey()))
-								                .findFirst();
+								                .findFirst()			// find the key
+								                .orElse(cleanUpEntry);	// or return a key that will cleanup the cell
 		                
-		key.ifPresent(e -> cell.text(e.getValue()));
+		String newHtml = cell.html()
+							 .replaceAll(key.getKey(), key.getValue());
+		cell.html(newHtml);
 						
 	}
 	
