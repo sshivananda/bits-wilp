@@ -30,5 +30,5 @@ https://drive.google.com/open?id=0B-Qi29uJcMn0UmRKT3hnUnRsZFU
 
 Support
 ------- 
-https://github.com/KiranMohan/maven-assembly-samples/issues
+https://github.com/KiranMohan/bits-wilp/issues
 
