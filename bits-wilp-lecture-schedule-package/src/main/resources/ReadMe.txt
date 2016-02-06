@@ -1,3 +1,7 @@
+BITS WILP Lecture Schedule Decrypter
+Version: 0.4
+
+
 Introduction
 ------------
 This scripts help remove the clutter and view the BITS WILP Lecture Schedule 

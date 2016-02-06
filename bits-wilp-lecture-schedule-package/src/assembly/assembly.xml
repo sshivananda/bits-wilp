@@ -3,11 +3,12 @@
 	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3 http://maven.apache.org/xsd/assembly-1.1.3.xsd">
-	<id>bits-wilp-lecture-schedule-package</id>
+	<id>${APPLICATION_NAME}</id>
 	<formats>
 		<format>zip</format>
 	</formats>
-	<baseDirectory>${project.parent.artifactId}</baseDirectory>
+	<baseDirectory>${APPLICATION_NAME}</baseDirectory>
+	
 	<fileSets>
 		<fileSet>
 			<directory>src/main/resources</directory>
@@ -20,6 +21,7 @@
 		<dependencySet>
 			<fileMode>0744</fileMode>
 			<useTransitiveDependencies>false</useTransitiveDependencies>
+			<useProjectArtifact>false</useProjectArtifact>
 			<outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
 		</dependencySet>
 		<dependencySet>
@@ -27,6 +29,7 @@
 				<include>org.kiranmohan.bits.wilp:bits-wilp-lecture-schedule</include>
 			</includes>
 			<useTransitiveDependencies>false</useTransitiveDependencies>
+			<useProjectArtifact>false</useProjectArtifact>
 			<fileMode>0644</fileMode>
 			<unpack>true</unpack>
 			<unpackOptions>
