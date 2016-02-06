@@ -7,7 +7,6 @@ import java.nio.file.Path;
 import java.util.AbstractMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -28,7 +27,7 @@ public class ParseAndCleanupScheduleHTML {
 	private Map<String,String> searchReplaceMap = null;
 	private Path cleanedUpHtml = null;
 	
-	private Map.Entry<String, String> cleanUpEntry = new AbstractMap.SimpleImmutableEntry(".*", "");
+	private Map.Entry<String, String> cleanUpEntry = new AbstractMap.SimpleImmutableEntry<>(".*", "");
 
 	/**
 	 * @param skipPatterns
