@@ -37,7 +37,7 @@ public class ParseAndCleanupScheduleHTMLTest {
 		searchReplaceMap.put("SS\\s*ZG527", "Cloud Computing");
 		searchReplaceMap.put("SS\\s*ZG582", "Telecom Network Management");
 		
-		ParseAndCleanupScheduleHTML parser = new ParseAndCleanupScheduleHTML(skipPatternList, searchReplaceMap);
+		CleanupScheduleHTML parser = new CleanupScheduleHTML(skipPatternList, searchReplaceMap);
 		parser.process(sampleScheduleFile, charset);
 		Path cleanedUpHtml = parser.getCleanedUpHtml();
 		assertNotNull(cleanedUpHtml);

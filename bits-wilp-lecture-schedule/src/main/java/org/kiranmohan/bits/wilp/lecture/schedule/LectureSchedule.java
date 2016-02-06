@@ -31,7 +31,7 @@ public class LectureSchedule {
 	private static final String DEFAUL_URL = "http://vu.bits-pilani.ac.in/onlineLecture/LectSchedule.htm";
 	
 	private String url = null;
-	private ParseAndCleanupScheduleHTML parseAndCleanup = null;
+	private CleanupScheduleHTML parseAndCleanup = null;
 	private boolean initialized = false;
 	private List<String> skipPatterns = new ArrayList<>();
 	private Map<String, String> searchReplaceMap = new HashMap<>();
@@ -45,7 +45,7 @@ public class LectureSchedule {
 		if (!initialized) {
 			readPreferences();
 		}
-		parseAndCleanup = new ParseAndCleanupScheduleHTML(skipPatterns, searchReplaceMap);
+		parseAndCleanup = new CleanupScheduleHTML(skipPatterns, searchReplaceMap);
 		initialized = true;
 	}
 	
