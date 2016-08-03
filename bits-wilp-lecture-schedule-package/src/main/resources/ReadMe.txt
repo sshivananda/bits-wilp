@@ -27,6 +27,7 @@ https://github.com/KiranMohan/bits-wilp
 Downloads
 ---------
 https://drive.google.com/open?id=0B-Qi29uJcMn0UmRKT3hnUnRsZFU
+NOTE: use your BITS Email id to access the file
 
 Support
 ------- 
