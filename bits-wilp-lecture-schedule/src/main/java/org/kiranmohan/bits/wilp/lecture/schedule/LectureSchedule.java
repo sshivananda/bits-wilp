@@ -28,7 +28,7 @@ public class LectureSchedule {
 	private static final String HTTPS_PROXY_HOST_KEY = "https_proxyHost";
 	private static final String HTTPS_PROXY_PORT_KEY = "https_proxyPort";
 	
-	private static final String DEFAUL_URL = "http://vu.bits-pilani.ac.in/onlineLecture/LectSchedule.htm";
+	private static final String DEFAULT_URL = "http://vu.bits-pilani.ac.in/onlineLecture/LectSchedule.htm";
 	
 	private String url = null;
 	private CleanupScheduleHTML parseAndCleanup = null;
